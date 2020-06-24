@@ -15,9 +15,9 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Blog Listings</a></li>
-										<li><a href="elements.html">Read Blog</a></li>
+										<li><a href="/">Homepage</a></li>
+										<li><a href="/main/listblogs">Blog Listings</a></li>
+										<li><a href="/main/readblog">Read Blog</a></li>
 									</ul>
 								</nav>
 

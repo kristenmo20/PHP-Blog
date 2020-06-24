@@ -20,7 +20,7 @@ class Main extends Controller {
     function ListBlogs() {
         $data = Array("title" => "Blog Listing");
         $this->view("template/header", $data);
-        $this->view("blog/list/bloglist");
+        $this->view("blog/list/index");
         $this->view("template/menu");
         $this->view("template/footer");
      

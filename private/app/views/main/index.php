@@ -27,7 +27,7 @@
 											<h3>Entry 1</h3>
 											<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/main/ReadBlog/1" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
@@ -35,7 +35,7 @@
 											<h3>Entry 2</h3>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/main/ReadBlog/2" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
@@ -43,7 +43,7 @@
 											<h3>Entry 3</h3>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/main/ReadBlog/3" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
@@ -51,7 +51,7 @@
 											<h3>Entry 4</h3>
 											<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/main/ReadBlog/4" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
@@ -59,7 +59,7 @@
 											<h3>Entry 5</h3>
 											<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/main/ReadBlog/5" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
@@ -67,7 +67,7 @@
 											<h3>Entry 6</h3>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/main/ReadBlog/6" class="button">More</a></li>
 											</ul>
 										</article>
 									</div>
