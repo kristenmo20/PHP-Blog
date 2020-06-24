@@ -14,8 +14,7 @@
         }
 
         function configure() {
-            require(ROOT . "/private/core/config/database.php");
-
+            require("/projects/MVC-Blog/private/core/config/database.php");
             if (isset($this->config["databse"])) {
                 try {
                     $this->db = new PDO($this->config["database"]["driver"] .
@@ -30,13 +29,13 @@
         }
 
         function load () {
-            require_once(ROOT . "/private/core/classes/controller.php");
-            require_once(ROOT . "/private/core/classes/model.php");
+            require_once("/projects/MVC-Blog/private/core/classes/controller.php");
+            require_once("/projects/MVC-Blog/private/core/classes/model.php");
         }
 
         function require ($path) {
 
-            require (ROOT . $path);
+            require ("/projects/MVC-Blog" . $path);
 
         }
 

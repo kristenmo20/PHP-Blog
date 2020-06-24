@@ -16,6 +16,23 @@ class Main extends Controller {
         
     }
 
+    function ListBlogs() {
+        $data = Array("title" => "Blog Listing");
+        $this->view("template/header", $data);
+        $this->view("template/menu", $data);
+        $this->view("blog/list/index");
+        $this->view("template/footer");
+     
+    }
+
+    function ReadBlog() {
+        $data = Array("title" => "Blog Entry");
+        $this->view("template/header", $data);
+        $this->view("template/menu", $data);
+        $this->view("blog/item/index");
+        $this->view("template/footer");
+    }
+
 }
 
 ?>

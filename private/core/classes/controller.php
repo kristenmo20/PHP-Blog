@@ -78,7 +78,7 @@ abstract class Controller {
 
     function view ($path, $data = []) {
 
-        require(ROOT . "/private/app/views/$path.php");
+        require("/projects/MVC-Blog" . "/private/app/views/$path.php");
 
     }
 }
