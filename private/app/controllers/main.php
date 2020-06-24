@@ -9,9 +9,10 @@ class Main extends Controller {
      * http://localhost/
      */
     function Index () {
-
+        $data = Array("title" => "Home");
         $this->view("template/header");
         $this->view("main/index");
+        $this->view("template/menu");
         $this->view("template/footer");
         
     }
@@ -19,8 +20,8 @@ class Main extends Controller {
     function ListBlogs() {
         $data = Array("title" => "Blog Listing");
         $this->view("template/header", $data);
-        $this->view("template/menu", $data);
-        $this->view("blog/list/index");
+        $this->view("blog/list/bloglist");
+        $this->view("template/menu");
         $this->view("template/footer");
      
     }
@@ -28,8 +29,8 @@ class Main extends Controller {
     function ReadBlog() {
         $data = Array("title" => "Blog Entry");
         $this->view("template/header", $data);
-        $this->view("template/menu", $data);
         $this->view("blog/item/index");
+        $this->view("template/menu");
         $this->view("template/footer");
     }
 
