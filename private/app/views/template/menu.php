@@ -17,7 +17,7 @@
 									<ul>
 										<li><a href="/">Homepage</a></li>
 										<li><a href="/main/listblogs">Blog Listings</a></li>
-										<li><a href="/main/ReadBlog">Read Blog</a></li>
+										<li><a href="/main/readblog">Read Blog</a></li>
 									</ul>
 								</nav>
 
