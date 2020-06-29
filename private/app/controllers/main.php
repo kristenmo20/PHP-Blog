@@ -10,14 +10,14 @@ class Main extends Controller {
      */
     function Index () {
         $data = Array("title" => "Home");
-        $this->view("template/header");
+        $this->view("template/header", $data);
         $this->view("main/index");
         $this->view("template/menu");
         $this->view("template/footer");
         
     }
 
-    function ListBlogs() {
+    function ListBlogs () {
         $data = Array("title" => "Blog Listing");
         $this->view("template/header", $data);
         $this->view("blog/list/index");
@@ -26,7 +26,7 @@ class Main extends Controller {
      
     }
 
-    function ReadBlog() {
+    function ReadBlog () {
         $data = Array("title" => "Blog Entry");
         $this->view("template/header", $data);
         $this->view("blog/item/index");

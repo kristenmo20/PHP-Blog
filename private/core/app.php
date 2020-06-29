@@ -15,13 +15,13 @@
 
         function configure() {
             require("/projects/MVC-Blog/private/core/config/database.php");
-            if (isset($this->config["databse"])) {
+            if (isset($this->config["database"])) {
                 try {
                     $this->db = new PDO($this->config["database"]["driver"] .
                         ":host=" . $this->config["database"]["dbhost"] .
                         ";dbname=" . $this->config["database"]["dbname"]
                         , $this->config["database"]["username"]
-                        , $this->config["database"]["passord"]);
+                        , $this->config["database"]["password"]);
                 } catch(PDOException $ex) {
                     echo($ex->getMessage);
                 }
