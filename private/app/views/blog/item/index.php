@@ -15,4 +15,5 @@
                                     </article>
                                     
 									<hr class="major" />
+								</section>
                                     

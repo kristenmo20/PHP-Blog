@@ -1,7 +1,7 @@
 <!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Blog Listings</h1>
+										<h1><?php echo($title) ?></h1>
 									</header>
 
 									<h2><a href="#">Entry 1</a></h2>
