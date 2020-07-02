@@ -71,16 +71,14 @@ abstract class Controller {
 
         $path = strtolower($path);
 
-        require("/projects/MVC-Blog" . "/private/app/models/$path.php");
+        require(ROOT . "/private/app/models/$path.php");
 
         $this->$class = new $class;
     }
 
     function view ($path, $data = []) {
 
-        extract($data);
-        
-        require("/projects/MVC-Blog" . "/private/app/views/$path.php");
+        require(ROOT . "/private/app/views/$path.php");
 
     }
 }
