@@ -1,9 +1,9 @@
 <?php
     
     $driver = "mysql";
-    $dbhost = "";
+    $dbhost = "db";
     $dbname = "";
-    $username = "baritchie";
-    $password = "";
+    $username = "root";
+    $password = "root";
 
 ?>
