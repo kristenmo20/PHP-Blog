@@ -5,7 +5,7 @@
 										<h1><?php echo($title) ?></h1>
 									</header>
 
-									<h2>Entry 1</h2>
+									<h2><?php echo($article) ?></h2>
                                     <p>Blog Author: Kristen Moss</p>
                                     <time>06/24/20 @ 7:25 pm</time><br>
                                     
