@@ -18,9 +18,9 @@ class Main extends Controller {
     }
 
     function ListBlogs () {
-        $this->model("BlogModel");
+        $this->model("blogmodel");
 
-        $listings = $this->BlogModel->listBlogArticles();
+        $listings = $this->blogmodel->listBlogArticles();
         $entry = Array("listings" => $listings);
 
         $data = Array("title" => "Blog Listing");
@@ -32,7 +32,7 @@ class Main extends Controller {
     }
 
     function ReadBlog ($slug) {
-        $this->model("BlogModel");
+        $this->model("blogmodel");
 
         $article = $this->blogmodel->readArticle($slug);
 
