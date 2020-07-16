@@ -2,7 +2,7 @@
 								<section>
 									<div class="content" style="text-align: center;">
 										<header>
-											<h1>Assignment 1<br />
+											<h1>Assignment 2<br />
 											by Kristen Moss</h1>
 											<p>Editorial template by HTML5 UP</p>
 										</header>

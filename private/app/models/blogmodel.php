@@ -15,7 +15,7 @@ class BlogModel extends Model {
     }
 
     function listBlogArticles() {
-        $sql = 'SELECT slug, title, author, post_date FROM blogPost';"
+        $sql = 'SELECT slug, title, author, post_date FROM blogPost';
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
@@ -33,5 +33,4 @@ class BlogModel extends Model {
 
 
 }
-
 ?>
