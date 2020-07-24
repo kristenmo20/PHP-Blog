@@ -19,8 +19,6 @@ CREATE TABLE blogPost (
   CONSTRAINT blogPost_fk_user_email
     FOREIGN KEY (user_email)
     REFERENCES users (email)
-    ON UPDATE CASCADE 
-    ON DELETE RESTRICT
 ) ENGINE = InnoDB;
 
 

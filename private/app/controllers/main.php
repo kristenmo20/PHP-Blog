@@ -23,7 +23,7 @@ class Main extends Controller {
         $listings = $this->blogmodel->listBlogArticles();
         $entry = Array("listings" => $listings);
 
-        $data = Array("title" => "Blog Listing");
+        $data = Array("heading" => "Blog Listing");
         $this->view("template/header", $data);
         $this->view("blog/list/index", $entry);
         $this->view("template/menu");
@@ -36,8 +36,8 @@ class Main extends Controller {
 
         $article = $this->blogmodel->readArticle($slug);
         
-        $data = Array("title" => $slug);
-        $this->view("template/header", $data);
+        $data = Array("slug" => $slug);
+        $this->view("template/header", $article);
         if ($slug !== null) {
 			$this->view("article/index", $article);
 		}
