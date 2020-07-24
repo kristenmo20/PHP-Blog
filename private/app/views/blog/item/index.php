@@ -6,7 +6,7 @@
 									</header>
 
 									<h2><?php echo($title) ?></h2>
-                                    <p>Blog Author: <?php echo($first_name . " " . $last_name) ?></p>
+                                    <p>Author: <?php echo($first_name . " " . $last_name) ?></p>
                                     <time><?php echo($publication_date) ?></time><br>
                                     
                                     <br>
