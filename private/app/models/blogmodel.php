@@ -15,7 +15,7 @@ class BlogModel extends Model {
     }
 
     function listBlogArticles() {
-        $sql = 'SELECT slug, title, author, post_date FROM blogPost';
+        $sql = 'SELECT * FROM blogPost ORDER BY publication_date DESC';
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 

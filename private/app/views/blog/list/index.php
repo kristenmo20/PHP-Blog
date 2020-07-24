@@ -6,7 +6,7 @@
 
                                     <?php 
                                         foreach($listings as $listing) {
-                                            echo("<h2><a href=\"\\main\\readBlog\\" . $blogPost["slug"] . "\">" . $blogPost["post_name"] . "</a></h2> - <time>" . $blogPost["publication_date"] . "</time>");
+                                            echo("<h2><a href=\"\\main\\listBlogs\\" . $blogPost["slug"] . "\">" . $blogPost["post_name"] . "</a></h2> - <time>" . $blogPost["publication_date"] . "</time>");
                                         }
                                     ?>
 

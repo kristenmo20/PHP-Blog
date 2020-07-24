@@ -31,14 +31,16 @@ class Main extends Controller {
      
     }
 
-    function ReadBlog ($slug) {
+    function ReadBlog ($slug = null) {
         $this->model("blogmodel");
 
         $article = $this->blogmodel->readArticle($slug);
-
+        
         $data = Array("title" => $slug);
         $this->view("template/header", $data);
-        $this->view("blog/item/index", $article);
+        if ($slug !== null) {
+			$this->view("article/index", $article);
+		}
         $this->view("template/menu");
         $this->view("template/footer");
     }
