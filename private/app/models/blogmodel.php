@@ -31,6 +31,17 @@ class BlogModel extends Model {
         return $res;
     }
 
+    function newPost($title, $user_email, $content) {
+        $slug = (str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999));
+
+        $sql = "INSERT INTO blogPost (slug, title, content, user_email) values (?, ?, ?, ?)";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(Array($slug, $title, $content, $user_email));
+
+        return $slug;
+    }
+
 
 }
 ?>

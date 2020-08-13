@@ -39,10 +39,19 @@ class Main extends Controller {
         $data = Array("slug" => $slug);
         $this->view("template/header", $article);
         if ($slug !== null) {
-			$this->view("article/index", $article);
+			$this->view("blog/item/index", $article);
 		}
         $this->view("template/menu");
         $this->view("template/footer");
+    }
+
+    function createBlog() {
+        $method = $_SERVER["REQUEST_METHOD"];
+        if ($method == "GET") {
+            //send back form
+        } elseif ($method == "POST") {
+            //process the new blog post
+        }
     }
 
 }
