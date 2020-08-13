@@ -46,11 +46,23 @@ class Main extends Controller {
     }
 
     function createBlog() {
-        $method = $_SERVER["REQUEST_METHOD"];
-        if ($method == "GET") {
-            //send back form
-        } elseif ($method == "POST") {
+        $method = $_SERVER['REQUEST_METHOD'];
+        if ($method == 'GET') {
+
+            $data = Array("heading" => "Create a New Post");
+
+            $this->view("template/header", $data);
+            $this->view("blog/create/index", $data);
+            $this->view("template/menu");
+            $this->view("template/footer");
+            
+        } else if ($method == 'POST') {
             //process the new blog post
+            
+            $title = htmlentities($_POST["title"]);
+            $content = htmlentities($_POST["content"]);
+            
+            echo("New post created.");
         }
     }
 
