@@ -1,6 +1,6 @@
 <h1><?php echo($heading) ?></h1>
 <form method="post">
-    <input type="hidden" value="" name="csrf">
+    <input type="hidden" value="<?php echo($csrf) ?>" name="csrf">
     <input type="hidden" value="<?php echo($title); ?>" name="key">
     <label for="title">Title</label>
     <input type="text" id="title" name="title" <?php if ($title != "") {echo("value=\"$title\"");}?>>

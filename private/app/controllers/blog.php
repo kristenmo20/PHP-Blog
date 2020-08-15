@@ -58,7 +58,7 @@ class Blog extends Controller {
             $content = htmlentities($_POST["content"]);
             $user_email = $_SESSION["email"];
 
-            $this->model("blogodel");
+            $this->model("blogmodel");
             $wasCreated = $this->blogmodel->createPost($slug, $title, $content, $user_email);
 
             //Check if post was created 
