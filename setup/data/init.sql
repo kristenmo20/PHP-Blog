@@ -19,15 +19,15 @@ CREATE TABLE blogPost (
   publication_date DATETIME DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT blogPost_fk_user_email
     FOREIGN KEY (user_email)
-    REFERENCES users (email)
+    REFERENCES author (email)
 ) ENGINE = InnoDB;
 
 
 
-INSERT INTO users (email, first_name, last_name) VALUES 
-    ("perry.white@dailyplanet.com", "Perry", "White"),
-    ("lois.lane@dailyplanet.com", "Lois", "Lane"),
-    ("clark.kent@dailyplanet.com", "Clark", "Kent");
+INSERT INTO author (email, first_name, last_name, password_hash) VALUES 
+    ("perry.white@dailyplanet.com", "Perry", "White", "$2y$10$qss.Z3LAj5s7vzMYYmLLsePgFuk0D8qT9/p1FJ0hQAF1VeQlnLDJi"),
+    ("lois.lane@dailyplanet.com", "Lois", "Lane", "$2y$10$5/ix4/P3Gm4w4KUTDwURMOgxxWZGciTx3k3CIawFJYZ1NSADl6JoS"),
+    ("clark.kent@dailyplanet.com", "Clark", "Kent", "$2y$10$YsEz.LP.iC64ja.3cViXdOpOW1f9O.n2yMiNEokzb92WDUNezvoFC");
 
 
 INSERT INTO blogPost (slug, title, content, user_email) VALUES 

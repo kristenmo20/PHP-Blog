@@ -1,0 +1,5 @@
+Name - email - password - password hash
+
+Lois Lane - lois.lane@dailyplanet.com - iHeartClark - $2y$10$5/ix4/P3Gm4w4KUTDwURMOgxxWZGciTx3k3CIawFJYZ1NSADl6JoS
+Clark Kent - clark.kent@dailyplanet.com - LoisMyLove - $2y$10$YsEz.LP.iC64ja.3cViXdOpOW1f9O.n2yMiNEokzb92WDUNezvoFC
+Perry White - perry.white@dailyplanet.com - iLoveLucy - $2y$10$qss.Z3LAj5s7vzMYYmLLsePgFuk0D8qT9/p1FJ0hQAF1VeQlnLDJi

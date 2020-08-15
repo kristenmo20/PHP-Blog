@@ -2,7 +2,7 @@
     
     $driver = "mysql";
     $dbhost = "db";
-    $dbname = "";
+    $dbname = "database";
     $username = "root";
     $password = "root";
 

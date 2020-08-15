@@ -15,7 +15,7 @@ class BlogModel extends Model {
     }
 
     function listBlogArticles() {
-        $sql = 'SELECT * FROM blogPost ORDER BY publication_date DESC';
+        $sql = 'SELECT * FROM `blogPost` ORDER BY publication_date DESC';
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
@@ -31,17 +31,33 @@ class BlogModel extends Model {
         return $res;
     }
 
-    function newPost($title, $user_email, $content) {
-        $slug = (str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999));
-
-        $sql = "INSERT INTO blogPost (slug, title, content, user_email) values (?, ?, ?, ?)";
+    function createPost($slug, $title, $content, $user_email) {
+        // $slug = (str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999));
+        // $user_email = $_SESSION["email"];
+        
+        $sql = "INSERT INTO `blogPost` (slug, title, content, user_email) VALUES (:slug, :title, :content, :user_email)";
 
         $stmt = $this->db->prepare($sql);
-        $stmt->execute(Array($slug, $title, $content, $user_email));
+        return $stmt->execute(array("slug"=>$slug, "title"=>$title, "content"=>$content, "user_email"=>$user_email));
 
-        return $slug;
+        //return $slug;
     }
 
+    function getLastPost() {
+        $sql = "SELECT * FROM `blogPost` LIMIT 1";
+        $stmt = $this->db->prepare($sql);
+        $stmt ->execute();
+        $res = $stmt->fetch();
+
+        return $res;
+    }
+
+    function updatePost($key, $title, $content) {
+        $sql = "UPDATE `blogPost` SET title = :title, content = :content WHERE title = :pk";
+        $stmt = $this->db->prepare($sql);
+        return $stmt ->execute(array("title"=>$title, "content"=>$content, "pk"=>$key));
+
+    }
 
 }
 ?>

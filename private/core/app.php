@@ -56,9 +56,14 @@
         function start () {
             $route = explode('/', URI);
 
-            $route[1] = strtolower($route[1]);
+            $options = array();
+            $options["name"] = "PHPSESSID";
+            $options["cookie_httponly"] = true;
+            $options["cooke_samesite"] = "strict";
 
             session_start();
+
+            $route[1] = strtolower($route[1]);
             
             if (file_exists(ROOT . "/private/app/controllers/" . $route[1] . ".php")) {
                 $this->require("/private/app/controllers/" . $route[1] . ".php");

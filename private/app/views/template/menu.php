@@ -16,8 +16,14 @@
 									</header>
 									<ul>
 										<li><a href="/">Homepage</a></li>
-										<li><a href="/main/listblogs">Blog Listings</a></li>
-										<li><a href="/main/readblog">Read Blog</a></li>
+										<li><a href="/blog/listblogs">Blog Listings</a></li>
+                                        <li><a href="/blog/readblog">Read Blog</a></li>
+                                        <li><a href="/blog/createblog">Create New Post</a></li>
+                                        <li><a href="/blog/updateblog">Update A Post</a></li>
+                                        <li><a href="/user/signin">Sign In</a></li>
+                                        <li><a href="#">Log Out</a></li>
+
+                                        
 									</ul>
 								</nav>
 

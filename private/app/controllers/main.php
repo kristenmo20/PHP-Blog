@@ -13,57 +13,23 @@ class Main extends Controller {
         $this->view("template/header", $data);
         $this->view("main/index");
         $this->view("template/menu");
-        $this->view("template/footer");
-        
+        $this->view("template/footer"); 
     }
 
-    function ListBlogs () {
-        $this->model("blogmodel");
+    function Logoff () {
 
-        $listings = $this->blogmodel->listBlogArticles();
-        $entry = Array("listings" => $listings);
+        $_SESSION = array();
 
-        $data = Array("heading" => "Blog Listing");
-        $this->view("template/header", $data);
-        $this->view("blog/list/index", $entry);
-        $this->view("template/menu");
-        $this->view("template/footer");
-     
-    }
-
-    function ReadBlog ($slug = null) {
-        $this->model("blogmodel");
-
-        $article = $this->blogmodel->readArticle($slug);
-        
-        $data = Array("slug" => $slug);
-        $this->view("template/header", $article);
-        if ($slug !== null) {
-			$this->view("blog/item/index", $article);
-		}
-        $this->view("template/menu");
-        $this->view("template/footer");
-    }
-
-    function createBlog() {
-        $method = $_SERVER['REQUEST_METHOD'];
-        if ($method == 'GET') {
-
-            $data = Array("heading" => "Create a New Post");
-
-            $this->view("template/header", $data);
-            $this->view("blog/create/index", $data);
-            $this->view("template/menu");
-            $this->view("template/footer");
-            
-        } else if ($method == 'POST') {
-            //process the new blog post
-            
-            $title = htmlentities($_POST["title"]);
-            $content = htmlentities($_POST["content"]);
-            
-            echo("New post created.");
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $params["path"], $params["domain"],
+                $params["secure"], $params["httponly"]
+            );
         }
+
+        session_destroy();
+
     }
 
 }
