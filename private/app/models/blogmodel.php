@@ -40,7 +40,6 @@ class BlogModel extends Model {
         $stmt = $this->db->prepare($sql);
         return $stmt->execute(array("slug"=>$slug, "title"=>$title, "content"=>$content, "user_email"=>$user_email));
 
-        //return $slug;
     }
 
     function getLastPost() {

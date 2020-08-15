@@ -43,13 +43,22 @@ class Blog extends Controller {
     }
 
     function CreateBlog() {
+
+        //check is logged in
+        $isLoggedIn = isset($_SESSION["isLoggedIn"]);
+
+        if (!$isLoggedIn) {
+            header("Location: /blog/listblogs");
+            
+        } 
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $title = htmlentities($_POST["title"]);
             $slug = htmlentities((str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999)));
             $content = htmlentities($_POST["content"]);
-            $user_email = "lois.lane@dailyplanet.com";
+            $user_email = $_SESSION["email"];
 
-            $this->model("blogmodel");
+            $this->model("blogodel");
             $wasCreated = $this->blogmodel->createPost($slug, $title, $content, $user_email);
 
             //Check if post was created 
@@ -71,6 +80,15 @@ class Blog extends Controller {
     }
 
     function UpdateBlog() {
+
+        //check is logged in
+        $isLoggedIn = isset($_SESSION["isLoggedIn"]);
+
+        if (!$isLoggedIn) {
+            header("Location: /blog/listblogs");
+            
+        } 
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $key = htmlentities($_POST['key']);
             $title = htmlentities($_POST['title']);
@@ -100,47 +118,6 @@ class Blog extends Controller {
         }
     }
 
-
-    
-
-    // function createBlog() {
-
-    //     $isAuthenticated = isset($_SESSION['email']);
-
-
-
-
-    //     $method = $_SERVER['REQUEST_METHOD'];
-    //     if ($method == 'GET') {
-
-    //         $data = Array("heading" => "Create a New Post");
-
-    //         $this->view("template/header", $data);
-    //         $this->view("blog/create/index", $data);
-    //         $this->view("template/menu");
-    //         $this->view("template/footer");
-            
-    //     } else if ($method == 'POST') {
-    //         //process the new blog post
-            
-    //         $title = htmlentities($_POST["title"]);
-    //         $content = htmlentities($_POST["content"]);
-            
-    //         echo("New post created.");
-    //     }
-    // }
-
-    // function CreateBlogPosting($title, $content, $user_email) {
-    //     $sql = "INSERT INTO `blogPost` (`title`, `content`, `user_email`) VALUES (:title, :content, :author);";
-    //     $stmt = $this->db->prepare($sql);
-    //     $params = array("title" -> $title, "content" -> $content, "user_email" -> $user_email);
-
-    //     $res = $stmt->execute($params);
-    //     if (!$res) {
-    //         echo("");
-    //     } 
-    //     return $res;
-    // }
 }
 
 
