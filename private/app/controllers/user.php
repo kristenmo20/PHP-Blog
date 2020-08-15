@@ -68,11 +68,62 @@ class User extends Controller {
                     $this->view("user/signin");
                     $this->view("template/bsFooter");
             } else {
+                //return to homepage if get request and logged in
                 header("Location: /");
             }
             
         }
     }
+
+    //no database version
+    //     function Index () {
+    //     if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
+    //         $verify = password_hash("iHeartClark", PASSWORD_DEFAULT);
+    //         $password = htmlentities($_POST["password"]);
+    //         $email = htmlentities($_POST["email"]);
+
+    //         // Query password based on email.
+                
+    //             $this->model("usermodel");
+    //             $auth = $this->usermodel->userAuth($email, $password);
+    //             echo($auth);
+
+    //             if ($verify) {
+    //                 $data = Array("header" => "Success");
+    //                 $this->view("template/header", $data);
+    //                 $this->view("user/success");
+    //                 $this->view("template/menu");
+    //                 $this->view("template/footer");
+                    
+    //                 $isVerified = $verify;
+    //                 $_SESSION["isLoggedIn"] = $verify;
+                    
+    //                 //header("Location: /");
+    //             } else {
+    //                 echo("Not Authenticated");
+    //                 echo("<br>");
+    //                 echo("Auth: " . $auth);
+    //                 echo("<br>");
+    //                 echo("Email: " . $email);
+    //                 echo("<br>");
+    //                 echo("Password: " . $password);
+    //                 echo("<br>");
+    //                 echo("isVerified: " . $isVerified);
+
+    //             }
+            
+    //     } else {
+    //         // display form
+    //         if (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"]) {
+    //                 $this->view("template/bsHeader");
+    //                 $this->view("user/signin");
+    //                 $this->view("template/bsFooter");
+    //         } else {
+    //             header("Location: /");
+    //         }
+            
+    //     }
+    // }
 
     function Logout () {
         $_SESSION["isLoggedIn"] = false;

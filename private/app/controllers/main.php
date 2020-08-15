@@ -30,6 +30,8 @@ class Main extends Controller {
 
         session_destroy();
 
+        header("Location: /");
+
     }
 
 }

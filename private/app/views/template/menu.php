@@ -21,7 +21,7 @@
                                         <li><a href="/blog/createblog">Create New Post</a></li>
                                         <li><a href="/blog/updateblog">Update A Post</a></li>
                                         <li><a href="/user/signin">Sign In</a></li>
-                                        <li><a href="#">Log Out</a></li>
+                                        <li><a href="/user/logout">Log Out</a></li>
 
                                         
 									</ul>

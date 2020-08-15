@@ -27,7 +27,7 @@
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                                         <li><a href="/user/signin"><i class="fas fa-sign-in-alt"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-sign-out-alt"></i></a></li>	
+                                        <li><a href="/user/logout"><i class="fas fa-sign-out-alt"></i></a></li>	
 	
 
 									</ul>

@@ -26,6 +26,9 @@ class UserModel extends Model {
                 $_SESSION['last_name'] = $row[2];
                 $_SESSION['email'] = $auth_email;
                 
+            } else {
+                //test to see if method is being called from sign in
+                $isAuthenticated = false;
             }
         }
 
