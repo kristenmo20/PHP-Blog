@@ -58,5 +58,14 @@ class BlogModel extends Model {
 
     }
 
+    function getLastFivePosts() {
+        $sql = "SELECT title FROM `blogPost` LIMIT 5";
+        $stmt = $this->db->prepare($sql);
+        $stmt ->execute();
+        $res = $stmt->fetch();
+
+        return $res;
+    }
+
 }
 ?>

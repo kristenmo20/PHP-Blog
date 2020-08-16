@@ -14,7 +14,25 @@
 									<span class="image object">
 										<img src="images/pic10.jpg" alt="" />
 									</span>
-								</section>
+                                </section>
+                            
+                            <!-- Section -->
+								<section>
+                                <div class="align-center">
+									<header class="major">
+										<h2>Latest Blog Posts</h2>
+									</header>
+									<div class="content align-center">
+										<article>
+                                            <h3><?php echo($posts) ?></h3>
+                                            <h3><?php echo($posts) ?></h3>
+                                            <h3><?php echo($posts) ?></h3>
+                                            <h3><?php echo($posts) ?></h3>
+                                            <h3><?php echo($posts) ?></h3>
+										</article>
+									</div>
+                                </div>
+                                </section>
 
                             <!-- Section -->
 								<section>
