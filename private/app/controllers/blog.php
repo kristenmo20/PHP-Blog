@@ -116,10 +116,18 @@ class Blog extends Controller {
             //Check if post was updated 
             if ($wasUpdated) {
                 //if successful redirect to read article
-                echo("Successfully created post.");
+                $data = Array("header" => "Blog Listings", "heading" => "Blog Listing");
+                $this->view("template/header", $data);
+                $this->view("blog/listblogs", $data);
+                $this->view("template/menu");
+                $this->view("template/footer");
             } else {
                 //if unsuccessful redirect to homepage
-                echo("Failed.");
+                $data = Array("title" => "Home");
+                $this->view("template/header", $data);
+                $this->view("main/index", $data);
+                $this->view("template/menu");
+                $this->view("template/footer");
             }
 
         } else {
