@@ -161,7 +161,12 @@ class User extends Controller {
         }
 
         session_destroy();
-        header("Location: /");
+        //header("Location: /");
+        $data = Array("header" => "Successfully Logged Out");
+        $this->view("template/header", $data);
+        $this->view("user/loggedOut");
+        $this->view("template/menu");
+        $this->view("template/footer");
     }
     
 

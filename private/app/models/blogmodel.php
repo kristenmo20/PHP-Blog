@@ -31,9 +31,9 @@ class BlogModel extends Model {
         return $res;
     }
 
-    function createPost($slug, $title, $content, $user_email) {
-        // $slug = (str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999));
-        // $user_email = $_SESSION["email"];
+    function createPost($title, $content) {
+        $slug = (str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999));
+        $user_email = $_SESSION["email"];
         
         $sql = "INSERT INTO `blogPost` (slug, title, content, user_email) VALUES (:slug, :title, :content, :user_email)";
 

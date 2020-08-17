@@ -48,26 +48,39 @@ class Blog extends Controller {
         $isLoggedIn = isset($_SESSION["isLoggedIn"]);
 
         if (!$isLoggedIn) {
-            header("Location: /blog/listblogs");
+            // header("Location: /blog/listblogs");
+            $this->view("template/header");
+            $this->view("user/pleaseLogIn");
+            $this->view("template/menu");
+            $this->view("template/footer");
             
         } 
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $title = htmlentities($_POST["title"]);
-            $slug = htmlentities((str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999)));
+            // $slug = htmlentities((str_replace(" ", "-",strtolower($title)) . random_int(1000, 999999)));
             $content = htmlentities($_POST["content"]);
-            $user_email = $_SESSION["email"];
+            // $user_email = $_SESSION["email"];
 
             $this->model("blogmodel");
-            $wasCreated = $this->blogmodel->createPost($slug, $title, $content, $user_email);
+            $wasCreated = $this->blogmodel->createPost($title, $content);
 
             //Check if post was created 
             if ($wasCreated) {
                 //if successful redirect to blog listings page
-                echo("Successfully created post.");
+                $data = Array("header" => "Blog Listings", "heading" => "Blog Listing");
+                $this->view("template/header", $data);
+                $this->view("blog/listblogs", $data);
+                $this->view("template/menu");
+                $this->view("template/footer");
             } else {
                 //if unsuccessful redirect to homepage
-                echo("Failed.");
+                $data = Array("title" => "Home");
+                $this->view("template/header", $data);
+                $this->view("main/index", $data);
+                $this->view("template/menu");
+                $this->view("template/footer");
+                
             }
 
         } else {
@@ -85,7 +98,10 @@ class Blog extends Controller {
         $isLoggedIn = isset($_SESSION["isLoggedIn"]);
 
         if (!$isLoggedIn) {
-            header("Location: /blog/listblogs");
+            $this->view("template/header");
+            $this->view("user/pleaseLogIn");
+            $this->view("template/menu");
+            $this->view("template/footer");
             
         } 
 
